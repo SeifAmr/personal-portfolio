@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    	<meta charset="UTF-8">
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <title> Technology Through the Eras </title>
+  </head>
+  <body>
+    <header>
+      <div id="page_title">
+        TECHNOLOGY THROUGH THE ERAS
+      </div>
+      
+      <img src="images/clock2.jpg" alt="" id="clock">
+      
+      <!-- Downward Arrow -->
+       <div id="arrow">
+          &dArr;
+       </div>
+       
+       <!-- User instructions -->
+       <div id="instructions1">
+        <p>Click each image to hear their sound.</p>
+        <p>Click the image again to pause the sound.</p>
+       </div>
+
+       <div id="instructions2">
+          <p>Click the Arrow to Begin</p>
+       </div>
+
+
+    </header>
+    <audio id="warning">
+      <source src="audio/beeping.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div id="content">
+    <!--   Image of thermometer   -->
+      <div class="gauge_container" data-aos="fade-up" data-aos-delay="100"
+      data-aos-duration="1000">
+        <img src="images/gauge4.png" alt="image of filling thermometer" id="gauge" >
+        <div id="gauge-fill"> </div>
+      </div>
+
+      <div id="era_container"> 
+        <!-- Stone Age Image and Audio -->
+        /<div class="era" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="1000" id="era1">
+          <div class="title">
+            The Stone Age
+          </div>
+            <audio id="stone-age-player">
+              <source src="audio/StoneAge.mp3" type="audio/mpeg">
+            </audio>
+            <img src="images/image_1.png" alt="" class="age_image" id="stone-age-img">
+        </div>
+        
+        <!-- Steel and Iron Age Image and Audio -->
+        <div class="era" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="1000" id="era2">
+          <div class="title">
+            The Steel & Iron Age
+          </div>
+          <audio id="steel-age-player">
+            <source src="audio/SteelAge.mp3" type="audio/mpeg">
+          </audio>
+          <img src="images/image_2.jpg" alt="" class="age_image" id="steel-age-img">
+        </div>
+        
+        <!-- Medieval & Renaissance Age Image and Audio -->
+        <div class="era" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="1000" id="era3">
+          <div class="title">
+            The Medieval & Renaissance Age
+          </div>
+          <audio id="medieval-age-player">
+            <source src="audio/MedievalAge.mp3" type="audio/mpeg">
+          </audio>
+          <img src="images/image_3.png" alt="" class="age_image" id="medieval-age-img">
+        </div>
+        
+        
+        <!-- Industrial Age Image and Audio -->
+        <div class="era" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="1000" id="era4">
+          <div class="title">
+            The Industrial Revolution Age
+          </div>
+          <audio id="industrial-age-player">
+            <source src="audio/IndustrialAge.mp3" type="audio/mpeg">
+          </audio>
+          <img src="images/image_4.png" alt="" class="age_image" id="industrial-age-img">
+        </div>
+  
+        <!-- Modern Age Image and Audio -->
+        <div class="era" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="1000" id="era5">
+          <div class="title">
+            The Modern Age
+          </div>
+          <audio id="modern-age-player">
+            <source src="audio/ModernAge.mp3" type="audio/mpeg">
+          </audio>
+          <img src="images/image_5.png" alt="" class="age_image" id="modern-age-img">
+        </div>
+        
+        <!-- Future Age Image and Audio -->
+        <div class="era" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="1000" id="era6">
+          <div class="title">
+            The Future
+          </div>
+          <audio id="future-age-player">
+            <source src="audio/FutureAge.mp3" type="audio/mpeg">
+          </audio>
+          <img src="images/image_6.png" alt="" class="age_image" id="future-age-img">
+        </div>
+      </div>
+    </div>
+    
+    <div data-aos="fade-up" data-aos-delay="100"
+    data-aos-duration="1000" id="next">
+      WHAT'S NEXT? <span id="we">WE</span> DECIDE.
+
+    </div>
+
+    <audio loop class="set2" id="soundTour2" src="StoneAge.mp3" muted autoplay></audio>
+    <audio loop class="set2" id="soundTour3" src="SteelAge.mp3" muted autoplay></audio>
+    <audio loop class="set2" id="soundTour4" src="MedievalAge.mp3" muted autoplay></audio>
+    <audio loop class="set2" id="soundTour5" src="IndustrialAge.mp3" muted autoplay></audio>
+    <audio loop class="set2" id="soundTour6" src="ModernAge.mp3" muted autoplay></audio>
+    <audio loop class="set2" id="soundTour7" src="FutureAge.mp3" muted autoplay></audio>
+    <!--<audio id="soundTour99" src="somesound5.mp3"></audio>-->
+
+
+
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <script src="script.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Comic Strip</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/splide.min.css" />
+    <!-- adding css animation library  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- adding jquery library  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- drag and drop library  -->
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  </head>
+
+  <body>
+    <!-- welome screen  -->
+    <div class="welcomeScreenWrapper">
+      <div class="welcomeScreen">
+        
+        <div id="outer-dropzone" class="dropzone" style="font-size: 150%;">Drop it here <br>  <br> <br>  <br> <br> <br>Which species are you?
+
+
+        </div>
+        <div id="yes-drop" class="drag-drop firstDrag">
+          <img src="./images/human.png" />
+        </div>
+        <div id="yes-drop" class="drag-drop floatright">
+          <img src="./images/monkey.png" />
+        </div>
+      </div>
+    </div>
+
+    <!-- storyline for monkeys least evolved  -->
+    <div id="monkeysplide">
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="imgcontainer">
+
+
+              	<div class="container">
+                <img src="images/Scene1.jpg" alt="" />
+			
+<!-- Panel 01  -->
+                
+                <div class="overlay">
+    <div class="text">	Human 1: <br> So how is everything going, ya all? <br> <br> <br>  Human 2: <br> Slowly progressing. I think a monkey just died on the platform while we inserted the chip. <br> <br> <br> Human 1: <br> Not again! I'll just bring another one from the cage. </div>
+  </div>
+  </div>
+
+
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainer">
+                
+                <div class="container">
+				<img src="images/Scene2.jpg" alt="" />
+
+<!-- Panel 02  -->
+			
+		     <div class="overlay">
+		    <div class="text">	Monkey language: <br> You killed my girlfriend you banana head. Don’t kill me!! How many more do you have to kiil to be satisfied! </div>
+		  </div>
+		</div>
+
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainerbig">
+
+              	<div class="container">
+                <img src="images/Scene3.jpg" alt="" />
+
+<!-- Panel 03  -->
+			
+                <div class="overlay">
+		    <div class="text">	Elon Musk: <br> Traffic in LA is driving me nuts! I shall create an electric tunnel! <br> <br> <br> Man, from crowd: <br> Elon, what happened on the monkey experiment?  <br> <br> <br> Elon Musk: <br> Monkeys survived the revolutionary trial, thanks for asking and don’t mind the board behind me, it is April fools! You get it. </div>
+		  </div>
+		</div>
+
+
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainer">
+
+
+              	<div class="container">
+                <img src="images/Scene4.jpg" alt="" />
+
+<!-- Panel 04  -->
+			
+                <div class="overlay">
+		    <div class="text">	Monkeys in a meeting <br> Revenge and more bananas!! Who's with me? <br> <br> <br>  </div>
+		  </div>
+		</div>
+
+
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainer">
+
+              	<div class="container">
+                <img src="images/Scene5.jpg" alt="" />
+
+<!-- Panel 05  -->
+			
+                <div class="overlay">
+		    <div class="text">	So human, your nuralink chip made us intelligent and now it is us to hold the prime. <br> <br> <br> By the way, your skin looks disgusting without any hair. <br> <br> <br> </div>
+		  </div>
+		</div>
+
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainer">
+
+              	<div class="container">
+                <img src="images/Scene6.jpg" alt="" />
+
+<!-- Panel 06  -->
+
+                  <div class="overlay">
+		    <div class="text">	Monkey 1: <br> Dayum, this human died too quick, he didn't even last a week! <br> <br> <br> Monkey 2: <br> Don't worry, we have plenty left in the cage. I'll go bring another one. <br> <br> <br> </div>
+		  </div>
+		</div>
+
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainerbig">
+
+<!-- Panel 07  -->
+		      
+              	<div class="container">
+                <img src="images/Scene7.jpg" alt="" />
+
+                  <div class="overlay">
+		    <div class="text">	I guess we have killed a human on our experiment. He had no rights after he stole the scientists’ banana lunch. <br> <br> <br> And yeah, why does traffic still exist in LA? Seriously my girlfriend broke up with me because I was 17 hours late!  <br> <br> <br> It was the traffic Monkeyita if you are watching this now!  </div>
+		  </div>
+		</div>
+		
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- storyline for humans least evolved  -->
+    <div id="humansplide">
+      <div class="splide splide2">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="imgcontainer">
+                <img src="images/Scene5.jpg" alt="" />
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainer">
+                <div class="container">
+                <img src="images/Scene6.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainerbig">
+                <div class="container">
+                <img src="images/Scene7.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainer">
+                <div class="container">
+                <img src="images/Scene1.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainer">
+                <div class="container">
+                <img src="images/Scene2.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="imgcontainerbig">
+                <div class="container">
+                <img src="images/Scene3.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+  </body>
+</html>

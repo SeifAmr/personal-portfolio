@@ -1,0 +1,171 @@
+body{
+  font-size: 100%;
+  background-color: black;
+  margin: 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header{
+  text-align: center;
+  padding: 25px;
+  font-size: 250%;
+  height: 100vh;
+  display: block;
+  background-color: black;
+  color: white;
+}
+
+#page_title{
+  padding: 20px;
+}
+
+#instructions1{
+  color: white;
+  position: absolute;
+  font-size: 40%;
+  left: 5px;
+  top: 80%;
+}
+
+#instructions2{
+  color: white;
+  position: absolute;
+  font-size: 40%;
+  left: 45%;
+  top: 90%;
+}
+
+#clock{
+  width: 40%;
+}
+
+#content{
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+}
+
+#arrow {
+  font-size: 200%;
+  animation: MoveUpDown 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 10px;
+}
+
+/* Move arrow up and down */
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 50px;
+  }
+}
+
+/* Ensure thermometer remains visible as you scroll*/
+.gauge_container{
+  top: 0px;
+  display: inline-block;
+  position: sticky;
+  height: 100vh;
+  left: 0%;
+  background-color: black;
+}
+
+/* Rectangular box that covers thermometer and gets smaller as you scroll
+   giving the illusion that the thermometer is filling */
+
+/* #gauge-fill{
+  position: absolute;
+  height: 90%;
+  top: 45px;
+  left: 40px;
+  width: 47px;
+  background: white;
+} */
+
+#gauge-fill{
+  position: absolute;
+  height: 100%;
+  top: 3px;
+  left: 42px;
+  width: 48px;
+  background: white;
+  max-width: 48px;
+}
+
+#gauge{
+  height: 100%;
+  position: relative;
+}
+
+#era_container{
+  background-color: black;
+}
+
+.era{
+  padding: 50px;
+  display: block;
+}
+
+.title{
+  text-align: center;
+  font-size: 200%;
+  margin: 10px;
+  padding: 20px;
+  border-top-style: solid;
+  border-top-color: black;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.age_image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+/* Background Color of each era/age*/
+#era1{
+  background-color: #5A8B0C;
+}
+
+#era2{
+  background-color: #86B33E;
+}
+
+#era3{
+  background-color: #F9CA20;
+}
+
+#era4{
+  background-color: #EE9327;
+}
+
+#era5{
+  background-color: #EA592A;
+}
+
+#era6{
+  background-color: #E81906;
+  opacity: 70%;
+}
+
+#next{
+  font-size: 200%;
+  text-align: center;
+  height: 40vh;
+  background-color: black;
+  color:white;
+  line-height: 40vh;
+  justify-content: center;
+}
+
+#we{
+  color: red;
+}

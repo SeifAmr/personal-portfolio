@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  transition: background-color 1s;
+}
+
+/* css for the splide  */
+#monkeysplide, #humansplide {
+  display: none;
+}
+.imgcontainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.imgcontainer img {
+  border: 5px solid red;
+  padding: 0px;
+  border-radius: 2px;
+}
+
+.imgcontainerbig {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+}
+.imgcontainerbig img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  position: center;
+  border-radius: 2px;
+}
+
+.overlay {
+  position: absolute;
+  padding: 30px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: grey;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+/* css for welcome screen  */
+.welcomeScreenWrapper {
+  background: url("https://www.science.org/do/10.1126/science.aaf4097/abs/sn-humanmutation.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 100px;
+}
+.welcomeScreen {
+  background: transparent;
+  width: 80%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+#images {
+  display: flex;
+  margin-top: 100px;
+  gap: 300px;
+  justify-content: center;
+}
+
+
+.dropzone {
+  transition: background-color 0.3s;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  padding: 10px;
+  border:4px solid black;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.drop-active {
+  border-color: #aaa;
+}
+
+
+.drag-drop {
+  display: inline-block;
+
+  height: 320px;
+  width: 320px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+
+  margin: 1rem 30px 0 30px;
+
+  color: #fff;
+  background-color: rgb(9, 228, 217);
+  border: solid 2px #fff;
+
+  touch-action: none;
+  transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
+}
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+.floatright {
+  float: right;
+}
+.drag-drop img {
+  width: 100%;
+  height: 100%;
+}
