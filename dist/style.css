@@ -53,7 +53,7 @@
   position: relative;
   top: 10%;
   left: 50%;
-  width: 50%;
+  /* width: 50%; */
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
@@ -76,24 +76,15 @@
 
 .text {
   background-color: #008CBA;
+  text-align: center;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
 }
 
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
+
+
 
 /*.grid-item:hover .overlay {
   opacity: 1;
@@ -104,7 +95,7 @@
   /* Try changing the width
      and height */
      position: absolute;
-     top:150%;
+     top:160%;
   width:100%;
   height:100%;
 
@@ -117,12 +108,7 @@
 
 }
 
-.box{
-  width:900px;
-  height:500px;
-  background-color:#008CBA;
-  opacity: 0.7;
-}
+
 
 .large-header {
   position: relative;
@@ -146,6 +132,21 @@ canvas{
   }
 }
 .main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  font-weight: 700;
+  font-size: 7em;
+
+}
+
+.header {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -191,9 +192,9 @@ canvas{
 .box{
   width:900px;
   height:500px;
-  background-color:#008CBA;
-  opacity: 0.8;
-  transition: background-color 0.5s ease;
+  background-color:#008CBA; */
+  opacity: 0.8; */
+  /* transition: background-color 0.5s ease; */
 }
 .slide-in-fwd-top {
 
