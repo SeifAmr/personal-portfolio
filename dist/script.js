@@ -39,9 +39,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
             for(var y = 0; y < height; y = y + height/20) {
                 var px = x + Math.random()*width/20;
                 var py = y + Math.random()*height/20;
-
                 var p = {x: px, originX: px, y: py, originY: py };
-                // create dictionary (p) to save y and x axis of the points
                 points.push(p);
             }
         }
@@ -82,7 +80,22 @@ document.getElementsByTagName('head')[0].appendChild(script);
             points[i].circle = c;
         }
     }
+    $(document).on("scroll", function() {
+  var pageTop = $(document).scrollTop();
+  var pageBottom = pageTop + $(window).height();
 
+  var tags = $(".box");
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i];
+
+    if ($(tag).position().top < pageBottom) {
+      $(tag).addClass("slide-in-fwd-top");
+    } else {
+      $(tag).removeClass("slide-in-fwd-top");
+    }
+  }
+});
     // Event handling
     function addListeners() {
         if(!('ontouchstart' in window)) {
@@ -93,7 +106,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 
     }
-// Tracking the mouse (adding scrollTop + clienty)
+
     function mouseMove(e) {
         var posx = posy = 0;
         const largeHeader1 = document.getElementById('large-header');
@@ -107,20 +120,26 @@ document.getElementsByTagName('head')[0].appendChild(script);
             posx = e.clientX;
             posy = e.clientY;
         }
+        console.log("this is posY:"+ posy);
 
 
 
         target.x = posx +scrollNumberX;
         target.y = posy + scrollNumberY;
 
+        // if (scrollNumberY == 261){
+        //
+        // document.querySelector(".element").classList.toggle("flip-scale-down-diag-2")}
+        console.log("this is targetY:"+ target.y);
     }
-// using scrollTop to stop animation when not needed
+
     function scrollCheck() {
       const largeHeader1 = document.getElementById('large-header');
 
         if(largeHeader1.scrollTop > height) animateHeader = false;
 
         else {
+          console.log("this is scroll2:"+largeHeader1.scrollTop);
           animateHeader = true;}
 
     }
@@ -134,20 +153,19 @@ document.getElementsByTagName('head')[0].appendChild(script);
         canvas.height = height;
     }
 
-    // initiate the animation for shifting points
+    // animation
     function initAnimation() {
         animate();
         for(var i in points) {
             shiftPoint(points[i]);
         }
     }
-//function for animating
+
     function animate() {
         if(animateHeader) {
             ctx.clearRect(0,0,width,height);
             for(var i in points) {
                 // detect points in range
-                // move the points with their circle
                 if(Math.abs(getDistance(target, points[i])) < 4000) {
                     points[i].active = 0.3;
                     points[i].circle.active = 0.6;
@@ -168,7 +186,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
         }
         requestAnimationFrame(animate);
     }
-// recursively shift points: using Tweenlite
+
     function shiftPoint(p) {
         TweenLite.to(p, 1+1*Math.random(), {x:p.originX-50+Math.random()*100,
             y: p.originY-50+Math.random()*100, ease:Circ.easeInOut,
@@ -177,14 +195,14 @@ document.getElementsByTagName('head')[0].appendChild(script);
             }});
     }
 
-    // draw lines and color it by #008CBA
+    // Canvas manipulation
     function drawLines(p) {
         if(!p.active) return;
         for(var i in p.closest) {
             ctx.beginPath();
-            ctx.moveTo(p.x, p.y); //start line from current point
-            ctx.lineTo(p.closest[i].x, p.closest[i].y); // line ends at the closetpoint[i]
-            ctx.strokeStyle = 'rgba(0, 140, 186, 0.4)'; // color the line and make it slightly transparent
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p.closest[i].x, p.closest[i].y);
+            ctx.strokeStyle = 'rgba(0, 140, 186, 0.4)';
             ctx.stroke();
         }
     }
@@ -208,7 +226,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
         };
     }
 
-    // get distance between two points
+    // Util
     function getDistance(p1, p2) {
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
